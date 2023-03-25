@@ -133,7 +133,7 @@ Para todas las experimentaciones que realizará en este laboratorio, extraiga lo
 
 ## Parte 3: _Análisis de resultados_
 
-## 1
+## Arreglo 2D
 
 ### Tabla Array diferente optimizacion
 
@@ -148,6 +148,8 @@ Para todas las experimentaciones que realizará en este laboratorio, extraiga lo
 |TotalPwr/insn	|35.3989|40.4065|42.7784|42.4953|
 |dcache access	|23319|6845|6845|6845|
 
+## Transformacion de Lazos
+
 ### Tabla Array diferente tamaño
 |				| 16 			| 32 			| 64 			| 128 			|
 |:---:			| :---:			| :---: 		| :---: 		| :---: 		|
@@ -160,6 +162,7 @@ Para todas las experimentaciones que realizará en este laboratorio, extraiga lo
 |TotalPwr/insn	|50.5350|       35.4484|       	29.7154|       	28.0676|
 |dcache access	|8890|          23321|         	79732|         	303320|
 
+##Adpcm, aes, fft, jpeg, matrixmultiply con diferentes niveles de optimización
 
 ### adpcm
 |				|00 			| 01 			| 02 			| 03 			|
@@ -221,7 +224,67 @@ Para todas las experimentaciones que realizará en este laboratorio, extraiga lo
 |TotalPwr/insn	| 33.4217| 39.2205| 36.3345| 36.9524|
 |dcache access	| 91549| 20644| 20645| 20641|
 
+##Adpcm, aes, fft, jpeg, matrixmultiply con modificaciones en la caché L1 de datos
 
+### adpcm
+|				| FIFO 			| RANDOM 		|Asoc. 4 		|Asoc. 256		|L. de cache 16	|
+|:---:			| :---:			| :---: 		| :---: 		| :---: 		|  :---: 		|
+|N. insn		|243576|243576| 243579| 243579|  243575|
+|T. sim			|183988|183988| 183660| 183660|  184584|	
+|cycles/insn	|0.7831|0.7831| 0.7817| 0.7817|  0.7856|
+|N. misses		|764|764| 529| 529|  1271|
+|Miss rate		|0.0073|0.0073| 0.0050| 0.0050|  0.0121|
+|Total Power	|12073036.1897|12073036.1897| 13214914.7930| 80736046.7432|  11993575.0463|
+|TotalPwr/insn	|49.5658|49.5658| 54.2531| 331.4573|  49.2398|
+|dcache access	|104840|104840| 104884| 104884|  104920|
+
+### aes
+|				| FIFO 			| RANDOM 		|Asoc. 4 		|Asoc. 256		|L. de cache 16	|
+|:---:			| :---:			| :---: 		| :---: 		| :---: 		|  :---: 		|
+|N. insn		|126687|126687|126687| 126687| 126692|
+|T. sim			|111160|111160|111096| 111096| 111201|	
+|cycles/insn	|0.9988|0.9988|0.9982| 0.9982| 0.9992|
+|N. misses		|622|622|531| 531| 1131|
+|Miss rate		|0.0188|0.0188|0.0161| 0.0161| 0.0342|
+|Total Power	|7294164.3088|7294164.3088|7993706.7072| 48837263.6882| 7225423.3234|
+|TotalPwr/insn	|57.5763|57.5763|63.0981| 385.4955| 57.0314|
+|dcache access	|33055|33055|33055| 33055| 33062|
+
+### fft
+|				| FIFO 			| RANDOM 		|Asoc. 4 		|Asoc. 256		|L. de cache 16	|
+|:---:			| :---:			| :---: 		| :---: 		| :---: 		|  :---: 		|
+|N. insn		|65537| 65537| 65537|65537| 65542|
+|T. sim			|42779| 42779| 42773|42773| 42788|	
+|cycles/insn	|0.6709| 0.6709| 0.6708|0.6708| 0.6710|
+|N. misses		|493| 493| 473|473| 921|
+|Miss rate		|0.0214| 0.0214| 0.0205|0.0205| 0.0399|
+|Total Power	|2807098.3714| 2807098.3714| 3077651.9135|18802803.6989| 2780203.5338|
+|TotalPwr/insn	|42.8323| 42.8323| 46.9605|286.9036| 42.4187|
+|dcache access	|23088| 23088| 23088|23088| 23090|
+
+### jpeg
+|				| FIFO 			| RANDOM 		|Asoc. 4 		|Asoc. 256		|L. de cache 16	|
+|:---:			| :---:			| :---: 		| :---: 		| :---: 		|  :---: 		|
+|N. insn		|6190956|6190956|6190228|6190228|6191392|
+|T. sim			|3165187|3165187|3104684|3104492|3168298|	
+|cycles/insn	|0.5399|0.5399|0.5296|0.5296|0.5405|
+|N. misses		|26741|26741|2264|2070|35174|
+|Miss rate		|0.0143|0.0143|0.0012|0.0011|0.0187|
+|Total Power	|207695160.5444|207695160.5444|223391781.1122|1364719651.7336|205864104.3146|
+|TotalPwr/insn	|33.5482|33.5482|36.0878|220.4636|33.2501|
+|dcache access	|1872396|1872396|1869900|1869900|1877154|
+
+### matrixmultiply
+|				| FIFO 			| RANDOM 		|Asoc. 4 		|Asoc. 256		|L. de cache 16	|
+|:---:			| :---:			| :---: 		| :---: 		| :---: 		|  :---: 		|
+|N. insn		|345093|345093|345093|345093|345094|
+|T. sim			|175767|175767|175706|175706|176679|	
+|cycles/insn	|0.5127|0.5127|0.5125|0.5125|0.5154|
+|N. misses		|615|615|584|584|1317|
+|Miss rate		|0.0067|0.0067|0.0064|0.0064|0.0144|
+|Total Power	|11533585.6249|11533585.6249|12642599.4698|77239506.8554|11479937.8365|
+|TotalPwr/insn	|33.4217|33.4217|36.6353|223.8223|33.2661|
+|dcache access	|91549|91549|91549|91549|91549|
 
 ## Evaluación
 Este laboratorio se evaluará con la siguiente rúbrica
