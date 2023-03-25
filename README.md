@@ -151,7 +151,7 @@ Para este experimento corrimos las diferentes transformaciones de lazo en un sol
 
 ## Optimizacion del compilador
 
-Al correr los diferentes benchmarks variando el nivel de optimización del compilador notamos que la mayor diferencia fue al pasar de no tener ningún tipo de optimización a el primer nivel de optimización. Al hacer este cambio la cantidad de instrucciones disminuye en cerca de un 50% al igual que la cantidad de ciclos que toma ejecutar el programa. El CPI también mejora, aunque no de una manera tan notable. Los desaciertos al accesar la cache de datos se mantienen igual prácticamente. La cantidad de potencia consumida también tiene una disminución que ronda el 50% al pasar de una compilación sin optimizaciones a una con el primer nivel.
+Al correr los diferentes programas variando el nivel de optimización del compilador notamos que la mayor diferencia fue al pasar de no tener ningún tipo de optimización a el primer nivel de optimización. Al hacer este cambio la cantidad de instrucciones disminuye en cerca de un 50% al igual que la cantidad de ciclos que toma ejecutar el programa. El CPI también mejora, aunque no de una manera tan notable. Los desaciertos al accesar la cache de datos se mantienen igual prácticamente. La cantidad de potencia consumida también tiene una disminución que ronda el 50% al pasar de una compilación sin optimizaciones a una con el primer nivel.
 Al seguir aumentando el nivel de optimización hasta llegar al nivel 3 continúa mejorando el rendimiento sin embargo no de una manera tan considerable como al pasar del nivel 0 al 1.
 
 
@@ -169,6 +169,9 @@ Al seguir aumentando el nivel de optimización hasta llegar al nivel 3 continúa
 |dcache access	|23319|6845|6845|6845|
 
 ## Adpcm, aes, fft, jpeg, matrixmultiply con diferentes niveles de optimización
+
+Para esta sección las diferencias fueron similares a cuando se corrio el arreglo con diferentes niveles de optimización. La cantidad de instrucciones disminuye en cerca de un 50% al igual que la cantidad de ciclos que toma ejecutar el programa. El CPI también mejora, aunque no de una manera tan notable. Los desaciertos al accesar la cache de datos se mantienen igual prácticamente. La cantidad de potencia consumida también tiene una disminución que ronda el 50% al pasar de una compilación sin optimizaciones a una con el primer nivel.
+Al seguir aumentando el nivel de optimización hasta llegar al nivel 3 continúa mejorando el rendimiento sin embargo no de una manera tan considerable como al pasar del nivel 0 al 1.
 
 ### adpcm
 |				|00 			| 01 			| 02 			| 03 			|
