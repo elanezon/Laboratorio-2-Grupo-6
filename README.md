@@ -235,6 +235,8 @@ Al seguir aumentando el nivel de optimización hasta llegar al nivel 3 continúa
 
 ## Adpcm, aes, fft, jpeg, matrixmultiply con modificaciones en la caché L1 de datos
 
+Al hacer los cambios en la memoria de cache vemos que las diferentes estrategias de reemplazo de bloque dan prácticamente los mismos resultados. Por otro lado las diferencias en la asociatividad redujeron el número de misses, sin embargo la diferencia entre una asociatividad de 4 y asociatividad completa no fue significativa en cuanto a rendimiento pero si en cuanto al consumo de potencia. El consumo de potencia se disparo enormemente al utilizar asociatividad completa.
+
 ### adpcm
 |				| FIFO 			| RANDOM 		|Asoc. 4 		|Asoc. 256		|L. de cache 16	|
 |:---:			| :---:			| :---: 		| :---: 		| :---: 		|  :---: 		|
@@ -243,7 +245,7 @@ Al seguir aumentando el nivel de optimización hasta llegar al nivel 3 continúa
 |cycles/insn	|0.7831|0.7831| 0.7817| 0.7817|  0.7856|
 |N. misses		|764|764| 529| 529|  1271|
 |Miss rate		|0.0073|0.0073| 0.0050| 0.0050|  0.0121|
-|Total Power	|12,073,036.1897|12,073,036.1897| 13,214,914.7930| 8,0736,046.7432|  11,993,575.0463|
+|Total Power	|12,073,036.1897|12,073,036.1897| 13,214,914.7930| 80,736,046.7432|  11,993,575.0463|
 |TotalPwr/insn	|49.5658|49.5658| 54.2531| 331.4573|  49.2398|
 |dcache access	|104840|104840| 104884| 104884|  104920|
 
