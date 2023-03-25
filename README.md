@@ -131,6 +131,41 @@ Para todas las experimentaciones que realizará en este laboratorio, extraiga lo
 -   Número de instrucciones ejecutadas y tiempo de ejecución.
 -   Rendimiento de caché.
 
+## Parte 3: _Análisis de resultados_
+
+##1
+
+###adpcm
+|				|00 			| 01 			| 02 			| 03 			|
+|:---:			| :---:			| :---: 		| :---: 		| :---: 		|
+|N. insn		| 243576		| 121489		| 119048		| 118522		|
+|T. sim			| 183988		| 72306			| 70707			| 69911			|
+|cycles/insn	| 0.7831		| 0.6287		| 0.6253		| 0.6222		|
+|N. misses		| 764			| 761			| 762			| 761			|
+|Miss rate		| 0.0073		| 0.0237		| 0.0236		| 0.0237		|
+|Total Power	| 12073036.19	| 4744618.968	| 4639694.816	| 4587462.406	|
+|TotalPwr/insn	| 49.5658		| 39.0539		| 38.9733		| 38.7056		|
+|dcache access	| 104840		| 32047			| 32321			| 32070			|
+
+###aes
+|				|00 			| 01 			| 02 			| 03 			|
+|:---:			| :---:			| :---: 		| :---: 		| :---: 		|
+|N. insn		| 126687		| 70887			| 57500			| 57500			|
+|T. sim			| 111160		| 60872			| 50103			| 50103			|	
+|cycles/insn	| 0.9988		| 1.1146		| 1.2181		| 1.2181		|
+|N. misses		| 622  			| 619			| 620			| 620			|
+|Miss rate		| 0.0188		| 0.0481		| 0.0513		| 0.0513		|
+|Total Power	| 7294164.309	| 3994335.821	| 3287689.046	| 3287689.046	|
+|TotalPwr/insn	| 57.5763		| 56.3479		| 57.1772		| 65.6186		|
+|dcache access	| 33055			| 12863			| 12079			| 12079			|
+###fft
+
+###jpeg
+
+###matrixmultiply
+
+
+
 
 ## Evaluación
 Este laboratorio se evaluará con la siguiente rúbrica
