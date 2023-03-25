@@ -148,7 +148,7 @@ Para todas las experimentaciones que realizará en este laboratorio, extraiga lo
 |TotalPwr/insn	|35.3989|40.4065|42.7784|42.4953|
 |dcache access	|23319|6845|6845|6845|
 
-### Tabla Array diferente tamano
+### Tabla Array diferente tamaño
 
 |				| 16 			| 32 			| 64 			| 128 			|
 |:---:			| :---:			| :---: 		| :---: 		| :---: 		|
