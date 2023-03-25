@@ -135,6 +135,7 @@ Para todas las experimentaciones que realizará en este laboratorio, extraiga lo
 
 ## Arreglo 2D
 ## Transformacion de Lazos
+Para este experimento corrimos las diferentes transformaciones de lazo en un solo programa por lo que la diferencia que podemos ver es entre el tamaño de los arreglos. Como es de esperar entre más grande es el arreglo mayor es la cantidad de instrucciones, potencia y demas recursos necesarios para poder llevar acabo las operaciones.
 
 ### Tabla Array diferente tamaño
 |				| 16 			| 32 			| 64 			| 128 			|
@@ -290,6 +291,8 @@ Al seguir aumentando el nivel de optimización hasta llegar al nivel 3 continúa
 |Total Power	|11533585.6249|11533585.6249|12642599.4698|77239506.8554|11479937.8365|
 |TotalPwr/insn	|33.4217|33.4217|36.6353|223.8223|33.2661|
 |dcache access	|91549|91549|91549|91549|91549|
+
+N. insn: Número total de instrucciones ejecutadas, T. sim: Tiempo total de simulación en ciclos, cycles/insn: Ciclos por instrucción, N. misses: Número total de misses, Miss rate: miss rate (misses/ref), Total Power: Potencia total por ciclo, TotalPwr/insn: Promedio de potencia total por instrucción, dcache access: Número total de accesos por dcache
 
 ## Evaluación
 Este laboratorio se evaluará con la siguiente rúbrica
