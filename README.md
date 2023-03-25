@@ -134,20 +134,6 @@ Para todas las experimentaciones que realizará en este laboratorio, extraiga lo
 ## Parte 3: _Análisis de resultados_
 
 ## Arreglo 2D
-
-### Tabla Array diferente optimizacion
-
-|				|00 			| 01 			| 02 			| 03 			|
-|:---:			| :---:			| :---: 		| :---: 		| :---: 		|
-|N. insn		| 75004| 28507| 26138| 26116|
-|T. sim			| 40462| 17554| 17040| 16913|
-|cycles/insn	| 0.5522| 0.6449| 0.691| 0.6862|
-|N. misses		| 571| 571| 571| 571|
-|Miss rate		| 0.0245| 0.0834| 0.0834| 0.0834|
-|Total Power	|2655060.06|1151869.02|1118141.056|1109807.493|
-|TotalPwr/insn	|35.3989|40.4065|42.7784|42.4953|
-|dcache access	|23319|6845|6845|6845|
-
 ## Transformacion de Lazos
 
 ### Tabla Array diferente tamaño
@@ -162,7 +148,26 @@ Para todas las experimentaciones que realizará en este laboratorio, extraiga lo
 |TotalPwr/insn	|50.5350|       35.4484|       	29.7154|       	28.0676|
 |dcache access	|8890|          23321|         	79732|         	303320|
 
-##Adpcm, aes, fft, jpeg, matrixmultiply con diferentes niveles de optimización
+## Optimizacion del compilador
+
+Al correr los diferentes benchmarks variando el nivel de optimización del compilador notamos que la mayor diferencia fue al pasar de no tener ningún tipo de optimización a el primer nivel de optimización. Al hacer este cambio la cantidad de instrucciones disminuye en cerca de un 50% al igual que la cantidad de ciclos que toma ejecutar el programa. El CPI también mejora, aunque no de una manera tan notable. Los desaciertos al accesar la cache de datos se mantienen igual prácticamente. La cantidad de potencia consumida también tiene una disminución que ronda el 50% al pasar de una compilación sin optimizaciones a una con el primer nivel.
+Al seguir aumentando el nivel de optimización hasta llegar al nivel 3 continúa mejorando el rendimiento sin embargo no de una manera tan considerable como al pasar del nivel 0 al 1.
+
+
+### Tabla Array diferente optimizacion
+
+|				|00 			| 01 			| 02 			| 03 			|
+|:---:			| :---:			| :---: 		| :---: 		| :---: 		|
+|N. insn		| 75004| 28507| 26138| 26116|
+|T. sim			| 40462| 17554| 17040| 16913|
+|cycles/insn	| 0.5522| 0.6449| 0.691| 0.6862|
+|N. misses		| 571| 571| 571| 571|
+|Miss rate		| 0.0245| 0.0834| 0.0834| 0.0834|
+|Total Power	|2655060.06|1151869.02|1118141.056|1109807.493|
+|TotalPwr/insn	|35.3989|40.4065|42.7784|42.4953|
+|dcache access	|23319|6845|6845|6845|
+
+## Adpcm, aes, fft, jpeg, matrixmultiply con diferentes niveles de optimización
 
 ### adpcm
 |				|00 			| 01 			| 02 			| 03 			|
@@ -224,7 +229,7 @@ Para todas las experimentaciones que realizará en este laboratorio, extraiga lo
 |TotalPwr/insn	| 33.4217| 39.2205| 36.3345| 36.9524|
 |dcache access	| 91549| 20644| 20645| 20641|
 
-##Adpcm, aes, fft, jpeg, matrixmultiply con modificaciones en la caché L1 de datos
+## Adpcm, aes, fft, jpeg, matrixmultiply con modificaciones en la caché L1 de datos
 
 ### adpcm
 |				| FIFO 			| RANDOM 		|Asoc. 4 		|Asoc. 256		|L. de cache 16	|
