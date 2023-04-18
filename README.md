@@ -305,10 +305,10 @@ Este laboratorio se evaluará con la siguiente rúbrica
 
 | Rubro | % | C | EP | D | NP |
 |-------|---|---|----|---|----|
-|Transformaciones manuales| 50|   |    |   |    |
-|Optimización del compilador| 10|   |    |   |    |
-|Experimentación con _benchmark_| 20|   |    |   |    |
-|Uso de repositorio|20|   |    |   |    |
+|Transformaciones manuales| 50|   |    |   |  X  |
+|Optimización del compilador| 10|   |  X  |   |    |
+|Experimentación con _benchmark_| 20|   |  X  |   |    |
+|Uso de repositorio|20| X  |    |   |    |
 
 C: Completo,
 EP: En progreso ($\times 0,8$),
